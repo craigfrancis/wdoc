@@ -20,7 +20,7 @@ These are often created as **PDF** files, as they:
 - Not built for easy editing.
 - Usually good for security (excluding issues in PDF reader software).
 
-Unfortunately **PDF**'s do have some problems:
+Unfortunately PDF's do have some problems:
 
 1. Do not work well on small screens (e.g. an A4 document will often cause horizontal/vertical scrolling).
 2. Requires custom software to convert the source document into a PDF file (most systems are ok at creating HTML, but this is difficult to convert to PDF).
@@ -31,7 +31,7 @@ Unfortunately **PDF**'s do have some problems:
 7. Often you cannot copy/paste, or search the text in the document (e.g. when you have 2 columns of text, or when every character has been individually placed on the canvas).
 8. When authoring documents, the positioning of elements is done from the bottom left of the canvas, so the vertical positioning needs to consider the amount of text the element contains, its font size, how the text wraps, etc.
 
-**HTML** can fix these problems:
+HTML can fix these problems:
 
 1. Can use CSS and media queries to work well on small and large screens.
 2. If you're starting with an HTML document, you don't need to do anything else.
@@ -42,21 +42,21 @@ Unfortunately **PDF**'s do have some problems:
 7. Browsers are much better at supporting copy/paste, and allowing the content to be indexed (e.g. searching).
 8. When authoring documents, the positioning of elements in HTML are rarely done with absolute positioning, as CSS provides better layout features (e.g. flexbox), which is generally easier and more intuitive.
 
-But we can't just email a **HTML** document to someone because:
+But we can't just email a HTML document to someone because:
 
 - It can request any other file on the computer (although some browsers do have some protections against this).
 - It can request files from the internet, allowing the author to retrieve content from their server (meaning content can be changed, which is not good for legal documents, e.g. invoices, terms and conditions, etc).
 - It can contain tracking code (JavaScript, images, etc) that allow the author to track when the file is opened (and possibly other events).
 - If you email the document, you cannot keep resources (like images) as separate files, they will need to be inlined (difficult, and can cause encoding problems).
 
-An alternative to **HTML** is **MHTML**, but this is pretty much the same (where the file is formatted like an email). This means you still have the same problems, but it will also need a program to parse the source HTML, include/encode the required resources, and update the HTML to point to those resources.
+An alternative to HTML is MHTML, but this is pretty much the same (where the file is formatted like an email). This means you still have the same problems, but it will also need a program to parse the source HTML, include/encode the required resources, and update the HTML to point to those resources.
 
-Another alternative is **DOCX** (MS Office), or **OpenDocument**, but these have their own problems:
+Another alternative is DOCX (MS Office), or OpenDocument, but these have their own problems:
 
 - Are perceived as easily editable, and often opened in a word processing program to reinforce this idea.
 - Use their own specifications, which are fairly difficult to read/understand for developers who are typically used to HTML.
 
-Then there is **EPUB**:
+Then there is EPUB:
 
 - These documents are often seen as publications (e.g. books), that you download and store in your e-reader. This is not appropriate for many documents that PDFs are currently used for, such as contracts.
 - Works on the assumption that you want multi-paged content, for example, most e-readers (on a large screen) will present the document with 2 pages, resembling a book layout.
@@ -65,7 +65,7 @@ Then there is **EPUB**:
 - Contains a fair amount of meta data (e.g. a list of all the XHTML documents in the OPF `<manifest>` and `<spine>`), which is extra work for developers to maintain for little to no value in some types of documents.
 - It can allow [remote content](http://www.idpf.org/epub/30/spec/epub30-publications.html#sec-resource-locations), which is not appropriate for the documents listed above.
 
-And finally **PWP**, which is related to **EPUB**:
+And finally PWP, which is related to EPUB:
 
 (For those unfamiliar with the format, these documents are referenced from a [central URL](https://www.w3.org/TR/pwp/#identification), and it uses the Open Web *Platform* to distribute the content. This allows you to refer to the publications canonical source).
 
