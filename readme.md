@@ -56,7 +56,7 @@ Another alternative is DOCX (MS Office), or OpenDocument, but these have their o
 - Are perceived as easily editable, and often opened in a word processing program to reinforce this idea.
 - Use their own specifications, which are fairly difficult to read/understand for developers who are typically used to HTML.
 
-
+  
 Then there is EPUB:
 
 - These documents are often seen as publications (e.g. books), that you download and store in your e-reader. This is not appropriate for many documents that PDFs are currently used for, such as contracts.
