@@ -1,5 +1,5 @@
 
-# PDF alternative using HTML (ZIP/GZIP)
+# PDF Alternative Using HTML (ZIP/GZIP)
 
 Sometimes you need create documents that can be emailed, printed, archived, etc.
 
@@ -17,35 +17,35 @@ These are often created as **PDF** files, as they:
 - Fairly small file size.
 - Contains everything they need in the file (e.g. custom fonts).
 - Can be read offline, and be archived.
-- Not really built for easy editing.
-- Do not cause many security problems (ish).
+- Not built for easy editing.
+- Usually good for security (excluding issues in PDF reader software).
 
 Unfortunately PDF's do have some problems:
 
 1. Do not work well on small screens (e.g. an A4 document will often cause horizontal/vertical scrolling).
 2. Requires custom software to convert the source document into a PDF file (most systems are ok at creating HTML, but this is difficult to convert to PDF).
-3. Content can be tagged for assistive devices, but this is rarely used (e.g. this text is a heading).
-4. Cannot really change the font size (different to zooming in).
-5. Cannot really change the font itself (e.g. applying the [OpenDyslexic](http://opendyslexic.org/) font).
-6. Cannot really change the colours for fonts/backgrounds (e.g. colour contrast).
+3. Content *can* be tagged for assistive devices (e.g. screen readers), but because it isn't automatically applied, it is rarely used (e.g. identifying heading text), leaving the document less accessible.
+4. The user cannot easily change the font size (different to zooming in, in that line length does not change, resulting in horizontal scrolling).
+5. The user cannot easily change the font itself (e.g. applying the [OpenDyslexic](http://opendyslexic.org/) font).
+6. The user cannot easily change the colours for fonts/backgrounds (e.g. colour contrast).
 7. Often you cannot copy/paste, or search the text in the document (e.g. when you have 2 columns of text, or when every character has been individually placed on the canvas).
-8. Positioning of elements is difficult, as it's done from the bottom left of the canvas (so font size, and text wrapping needs to be considered).
+8. When authoring documents, the positioning of elements is done from the bottom left of the canvas, so the vertical positioning needs to consider the amount of text the element contains, its font size, how the text wraps, etc.
 
 HTML can fix these problems:
 
 1. Can use CSS and media queries to work well on small and large screens.
-2. If you're starting with HTML, you don't need to do anything else.
+2. If you're starting with an HTML document, you don't need to do anything else.
 3. Developers are already conditioned (most of the time) to use semantic elements such as H1-6, Paragraphs, etc.
 4. Some browsers allow you to change the font size (e.g. Firefox).
 5. Most browsers have extensions for users to easily change the font in use (e.g. [OpenDyslexic](http://opendyslexic.org/get-it-free/)).
 6. Extensions can also fix colour contrast issues.
-7. Browsers are much at supporting copy/paste, or for the content to be indexed (e.g. searching).
-8. Positioning of elements is rarely done with absolute units, instead other CSS layout features are used (e.g. flexbox).
+7. Browsers are much better at supporting copy/paste, and allowing the content to be indexed (e.g. searching).
+8. When authoring documents, the positioning of elements in HTML are rarely done with absolute positioning, as CSS provides better layout features (e.g. flexbox), which is generally easier and more intuitive.
 
-But we can't just email a HTML document to someone:
+But we can't just email a HTML document to someone because:
 
 - It can request any other file on the computer (although some browsers do have some protections against this).
-- It can request files from the internet, allowing the author to retrive content from their server (i.e. content can be changed).
+- It can request files from the internet, allowing the author to retrieve content from their server (meaning content can be changed, which is not good for legal documents, e.g. invoices, terms and conditions, etc).
 - It can contain tracking code (JavaScript, images, etc) that allow the author to track when the file is opened (and possibly other events).
 - If you email the document, you cannot keep resources (like images) as separate files, they will need to be inlined (difficult, and can cause encoding problems).
 
@@ -53,63 +53,67 @@ An alternative to HTML is MHTML, but this is pretty much the same (where the fil
 
 Another alternative is DOCX (MS Office), or OpenDocument, but these have their own problems:
 
-- Typically seen as something that is editable, and often opened in a word processing program.
+- Are perceived as easily editable, and often opened in a word processing program to reinforce this idea.
 - Use their own specifications, which are fairly difficult to read/understand for developers who are typically used to HTML.
 
-Then there is EPUP:
+Then there is EPUB:
 
-- These documents are often seen as publications (e.g. books), that you download and store in your e-reader.
-- Works on the assumption that you want multi-paged content.
-- Needs a [Table of Contents](http://www.idpf.org/epub/30/spec/epub30-contentdocs.html#sec-xhtml-nav-def-types-toc), and ideally a [cover-image](http://www.idpf.org/epub/30/spec/epub30-publications.html#sec-item-property-values).
+- These documents are often seen as publications (e.g. books), that you download and store in your e-reader. This is not appropriate for many documents that PDFs are currently used for, such as contracts.
+- Works on the assumption that you want multi-paged content, for example, most e-readers (on a large screen) will present the document with 2 pages, resembling a book layout.
+- Requires a [Table of Contents](http://www.idpf.org/epub/30/spec/epub30-contentdocs.html#sec-xhtml-nav-def-types-toc).
 - Requires a special program to package up the document (e.g. the [IDPF Java program](https://github.com/IDPF/epub3-samples)).
-- Contains a fair amount of meta data (e.g. a list of all the XHTML documents in the OPF `<manifest>` and `<spine>`).
-- It can allow [remote content](http://www.idpf.org/epub/30/spec/epub30-publications.html#sec-resource-locations), but this is disabled by default.
+- Contains a fair amount of meta data (e.g. a list of all the XHTML documents in the OPF `<manifest>` and `<spine>`), which is extra work for developers to maintain for little to no value in some types of documents.
+- It can allow [remote content](http://www.idpf.org/epub/30/spec/epub30-publications.html#sec-resource-locations), which is not appropriate for the documents listed above.
+
 
 And finally PWP, which is related to EPUB:
 
-- Documents are referenced from a [central URL](https://www.w3.org/TR/pwp/#identification), and uses the Open Web *Platform* to distribute the content.
-- This allows you to refer to the publications canonical source.
-- The copy you download can be [stored for offline use](https://www.w3.org/TR/pwp/#package), but new versions can be pulled from the source URL (not good for Terms and Conditions, but useful for authors to correct typos, and genrally keeping the document up to date).
+(For those unfamiliar with the format, these documents are referenced from a [central URL](https://www.w3.org/TR/pwp/#identification), and it uses the Open Web *Platform* to distribute the content. This allows you to refer to the publications canonical source).
+
+This format allows you to download the publication, and [store it for offline use](https://www.w3.org/TR/pwp/#package). But new versions can be pulled from the source URL (not good for Terms and Conditions, Invoices etc).
+And it shares the same issues as the EPUB format.
 
 ---
 
-# A possible solution
+# A Possible Solution
 
-## Manually creating a new file
+## Technically Creating Files
 
-A developer creates an `index.html` file in a folder, and includes the needed resources (e.g. images/css).
+It would start with an `index.html` file in a folder, and include the needed resources (e.g. images/css).
 
-They then use ZIP/GZIP to package it:
+Then uses ZIP/GZIP to package it:
 
-	zip -r ./my-file.hdoc ./my-file/
+	zip -r ./my-file.wdoc ./my-file/
 
-And they're done :-)
+And it's done.
 
-## Automatically creating a new file
+## End User's Experience
 
-A Word Processor can just save to this file format, like they do with PDFs.
+A Word Processor could just save to this file format, from a users point of view, this is the same as exporting to a PDF file.
 
-This can also be used by browsers in their "Save Web Page as" feature. Most browsers only provide the option to save the "HTML only" (no resources), or to put the resources into a folder next to the HTML file (which is often lost later).
+This should be fairly easy to implement as most word processors already have the ability to save as a HTML file.
 
-## Using the file format
+This file format can also be used by browsers in their "Save Web Page as" feature. Most browsers only provide the option to save the "HTML only" (no resources), or to put the resources into a folder next to the HTML file (which can be lost by the user later).
 
-The file will open in the users preferred web browser... just double click :-)
+## Using The File Format
 
-Or it could be viewed within email clients in a simular way.
+The file would open in the user's preferred web browser... just double click.
 
-The file can be downloaded from a web site, sent via email, stored on a USB drive (just like any other file).
+Or it could be viewed within email clients in a similar way.
 
-## The browsers
+The file could be downloaded from a web site, sent via email, stored on a USB drive (just like any other file).
+
+## The Browsers
 
 Most of the Open Web *Technology* is already in place for this to work.
 
-The browsers will need to get to the `index.html` from the ZIP (which may be password protected), and any additional resources (also from the ZIP).
+The browsers will need to get to the `index.html` from the ZIP (which the author may password protect, like a PDF), and any additional resources (also from the ZIP).
 
-FireFox does have some of this in place, which looks roughly like:
+Firefox does have some of this in place, which looks like:
 
-	jar:file:///.../<strong>my-file.hdoc</strong>!/index.html
+	jar:file:///.../my-file.wdoc!/index.html
 
-The browser will also need to enforce a [Content Security Policy](https://en.wikipedia.org/wiki/Content_Security_Policy), one that blocks outbound connections, something like:
+The browser can use the existing functionality that is used in the [Content Security Policy](https://en.wikipedia.org/wiki/Content_Security_Policy), where it can block outbound connections. If implemented on a website, it would look something like:
 
 	default-src 'none';
 	style-src 'self';
@@ -119,15 +123,15 @@ The browser will also need to enforce a [Content Security Policy](https://en.wik
 	referrer no-referrer;
 	frame-ancestors 'none'
 
-I know, I'm not going to get away with script-src without [unsafe-inline](https://www.w3.org/TR/CSP/#directive-script-src), but I can still hope :-)
+For security reasons the browser should not include [unsafe-inline](https://www.w3.org/TR/CSP/#directive-script-src) in the script-src, just for following good programming practices, however there should not be any way this can cause problems because the rest of the document is sandboxed.
 
-The browser will have to block resources that are not in the ZIP file, some of which can be done with the sub-origin proposals.
+The browser would block resources that are not in the ZIP file, which should be possible with existing functionality (with the current sub-origin proposals needing this as well).
 
-Finally the browser will have to block access to local storage (inc cookies), so each time the document is opened, it's like being opened for the first time.
+It could be argued that it should block JavaScript from accessing the current date/time, so we don't have content that changes after a certain point in time (keeping in mind legal documents).
+
+Finally the browser would have to block access to local storage (including cookies), so each time the document is opened, it's like being opened for the first time. Also possible to implement with existing functionality (e.g. private browsing mode).
 
 That's not to say that the browser (not the JavaScript in the document) couldn't do things like remember annotations for the user.
-
-It might also have to block JavaScript from accessing the current date/time, so we don't have content that changes after a certain point in time (keep in mind those legal documents).
 
 ## Security
 
@@ -135,27 +139,27 @@ The most important thing about this file format is *security*.
 
 We need IT departments to feel very comfortable allowing them onto their network.
 
-And for virus/spam filters not to rely on huristics to determine if the file contains malicious code (like they do looking for macros in MS Word documents).
+And for virus/spam filters not to rely on heuristics to determine if the file contains malicious code (like they do looking for macros in MS Word documents).
 
 ---
 
 # Miscellaneous
 
-You will notice this is a similar approach that Microsoft Word did with the docx format, Java with JAR, PHP with PHAR, etc.
+You will notice that the idea of packaging files up into a ZIP file is a similar approach that Microsoft Word did with the docx format, Java with JAR, PHP with PHAR, etc.
 
 It should be possible to include more than one HTML file, if you want multiple pages within the document.
 
-Maybe it can support multiple languages... or just use `lang="en"` and some CSS to show/hide?
+It has the potential to support multiple languages... or perhaps just use `lang="en"` and some CSS to show/hide.
 
-The `hdoc` extension was stolen from [hdoc.crzt.fr](http://hdoc.crzt.fr/www/co/hdoc.html), which is similar to EPUB.
+The example file extension is wdoc (web document), but could be anything.
 
-## Bug/feature requests
+## Feature Requests
 
 - [Chrome](https://crbug.com/575677)
 - [Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=1237990)
 - [Edge](https://wpdev.uservoice.com/forums/257854-microsoft-edge-developer/suggestions/11443002-webpage-zip-as-alternative-to-pdf)
 
-## Mailing lists
+## Mailing Lists
 
 - [W3C Public-DigiPub-IG](https://lists.w3.org/Archives/Public/public-digipub-ig/2016Jan/0089.html)
 - [W3C Public-WebAppSec](https://lists.w3.org/Archives/Public/public-webappsec/2016Jan/0063.html)
