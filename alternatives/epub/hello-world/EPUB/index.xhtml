@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="en" lang="en">
+	<head>
+		<title>Hello World</title>
+		<link rel="stylesheet" type="text/css" href="css/epub.css" />
+	</head>
+	<body>
+		<nav epub:type="toc" id="toc">
+			<h2>Table of Contents</h2>
+			<ol>
+				<li><a href="index.xhtml">The toc seems to be required, and need an ordered list.</a></li>
+			</ol>
+		</nav>
+		<section>
+			<h1 class="title">Hello World</h1>
+			<p id="new-text1">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			<p id="new-text2">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			<script type="text/javascript">
+				document.getElementById('new-text2').textContent = 'This was added by JavaScript :-)';
+			</script>
+		</section>
+	</body>
+</html>
