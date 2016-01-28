@@ -11,7 +11,7 @@ Some examples include:
 - Reports, assessments, statistics.
 - Bank statements.
 
-These are often created as **PDF** files, as they:
+These are often created as PDF files, as they:
 
 - Ensure a consistent visual representation (looks the same).
 - Fairly small file size.
