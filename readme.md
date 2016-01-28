@@ -52,11 +52,9 @@ But we can't just email a HTML document to someone because:
 An alternative to HTML is MHTML, but this is pretty much the same (where the file is formatted like an email). This means you still have the same problems, but it will also need a program to parse the source HTML, include/encode the required resources, and update the HTML to point to those resources.
 
 Another alternative is DOCX (MS Office), or OpenDocument, but these have their own problems:
-
 - Are perceived as easily editable, and often opened in a word processing program to reinforce this idea.
 - Use their own specifications, which are fairly difficult to read/understand for developers who are typically used to HTML.
 
-  
 Then there is EPUB:
 
 - These documents are often seen as publications (e.g. books), that you download and store in your e-reader. This is not appropriate for many documents that PDFs are currently used for, such as contracts.
