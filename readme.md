@@ -150,7 +150,7 @@ It should be possible to include more than one HTML file, if you want multiple p
 
 It has the potential to support multiple languages... or perhaps just use `lang="en"` and some CSS to show/hide.
 
-The example file extension is wdoc (web document), but could be anything.
+The example file extension is **wdoc** (web document), but could be anything.
 
 ## Feature Requests
 
