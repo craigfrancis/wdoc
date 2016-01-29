@@ -106,7 +106,27 @@ Most of the Open Web *Technology* is already in place for this to work.
 
 The browsers will need to get to the `index.html` from the ZIP (which the author may password protect, like a PDF), and any additional resources (also from the ZIP).
 
-Firefox does have some of this in place, which looks like:
+So the file can be located like any local file:
+
+	file:///temp/example.wdoc
+
+And the resources can be referenced with:
+
+	<img src="./img/logo.jpg" />
+
+	file:///temp/example.wdoc/img/logo.jpg
+
+	<link rel="stylesheet" href="/css/styles.css" />
+
+	file:///temp/example.wdoc/css/styles.css
+
+	<a href="../../../../../../page2.html">Page 2</a>
+
+	file:///temp/example.wdoc/page2.html
+
+Noting that the last two still cannot reference anything outside of the ZIP file, in the same way as resources are currently handled on websites.
+
+Firefox already has some of this in place, which looks like:
 
 	jar:file:///.../my-file.wdoc!/index.html
 
