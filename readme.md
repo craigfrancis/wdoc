@@ -88,7 +88,7 @@ And it's done.
 
 A Word Processor could just save to this file format, from a users point of view, this is the same as exporting to a PDF file.
 
-This should be fairly easy to implement as most word processors already have the ability to save as a HTML file.
+This should be fairly easy to implement, as most word processors already have the ability to save as a HTML file.
 
 This file format can also be used by browsers in their "Save Web Page as" feature. Most browsers only provide the option to save the "HTML only" (no resources), or to put the resources into a folder next to the HTML file (which can be lost by the user later).
 
@@ -110,7 +110,7 @@ Firefox does have some of this in place, which looks like:
 
 	jar:file:///.../my-file.wdoc!/index.html
 
-The browser can use the existing functionality that is used for [Content Security Policies](https://en.wikipedia.org/wiki/Content_Security_Policy), to block outbound connections. If implemented on a website, it would look something like:
+The browser can use the existing functionality for [Content Security Policies](https://en.wikipedia.org/wiki/Content_Security_Policy), to block outbound connections. If implemented on a website, it would look something like:
 
 	default-src 'none';
 	style-src 'self';
