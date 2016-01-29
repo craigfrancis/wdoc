@@ -140,7 +140,7 @@ The browser can also use the existing functionality for [Content Security Polici
 	referrer no-referrer;
 	frame-ancestors 'none'
 
-For security reasons the browser should not include [unsafe-inline](https://www.w3.org/TR/CSP/#directive-script-src) in the `script-src`, just for following good programming practices. However this should not cause problems, because the rest of the document is sandboxed anyway.
+For security reasons the browser should not include [unsafe-inline](https://www.w3.org/TR/CSP/#directive-script-src) in the `script-src`, just for following good programming practices. However it was included, it would not cause any problems as the rest of the document is sandboxed anyway.
 
 The browser would block resources that are not in the ZIP file, which should be possible with existing functionality (with the current sub-origin proposals needing this as well).
 
