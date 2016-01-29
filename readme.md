@@ -106,7 +106,7 @@ Most of the Open Web *Technology* is already in place for this to work.
 
 The browsers will need to get to the `index.html` from the ZIP (which the author may password protect, like a PDF), and any additional resources (also from the ZIP).
 
-So the file can be located like any local file:
+So this file can be referenced like any local file:
 
 	file:///temp/example.wdoc
 
