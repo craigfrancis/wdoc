@@ -124,7 +124,7 @@ For security reasons the browser should not include [unsafe-inline](https://www.
 
 The browser would block resources that are not in the ZIP file, which should be possible with existing functionality (with the current sub-origin proposals needing this as well).
 
-It could be argued that it should block JavaScript from accessing the current date/time, so we don't have content that changes after a certain point in time (keeping in mind legal documents).
+It could be argued that it should also block JavaScript from accessing the current date/time, so we don't have content that changes after a certain point in time (keeping in mind legal documents).
 
 Finally the browser would have to block access to local storage (including cookies), so each time the document is opened, it's like being opened for the first time. Also possible to implement with existing functionality (e.g. private browsing mode).
 
@@ -136,7 +136,7 @@ The most important thing about this file format is *security*.
 
 We need IT departments to feel very comfortable allowing them onto their network.
 
-And for virus/spam filters not to rely on heuristics to determine if the file contains malicious code (like they do looking for macros in MS Word documents).
+And for virus/spam filters not to rely on heuristics to determine if the file contains malicious code (like they do when looking for macros in MS Word documents).
 
 ---
 
