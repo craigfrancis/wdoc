@@ -25,7 +25,7 @@ Unfortunately **PDF**'s do have some problems:
 1. Do not work well on small screens (e.g. an A4 document will often cause horizontal/vertical scrolling).
 2. Requires custom software to convert the source document into a PDF file (most systems are ok at creating HTML, but this is difficult to convert to PDF).
 3. Content *can* be tagged for assistive devices (e.g. screen readers), but because it isn't automatically applied, it is rarely used (e.g. identifying heading text), leaving the document less accessible.
-4. The user cannot easily change the font size (different to zooming in, in that line length does not change, resulting in horizontal scrolling).
+4. The user cannot easily change the font size (different to zooming in, in that the line length does not change, resulting in horizontal scrolling).
 5. The user cannot easily change the font itself (e.g. applying the [OpenDyslexic](http://opendyslexic.org/) font).
 6. The user cannot easily change the colours for fonts/backgrounds (e.g. colour contrast).
 7. Often you cannot copy/paste, or search the text in the document (e.g. when you have 2 columns of text, or when every character has been individually placed on the canvas).
