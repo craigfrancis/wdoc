@@ -110,7 +110,7 @@ So this file can be referenced like any local file:
 
 	file:///temp/example.wdoc
 
-And the resources can be referenced with:
+And the resources within it can be referenced with:
 
 	<img src="./img/logo.jpg" />
 
