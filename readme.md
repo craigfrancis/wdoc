@@ -126,7 +126,7 @@ And the resources within it can be referenced with:
 
 Noting that the last two still cannot reference anything outside of the ZIP file, in the same way as resources are currently handled on websites.
 
-Firefox already has some of this in place, which looks like:
+Firefox already has some of this in place with the `jar` protocol:
 
 	jar:file:///.../my-file.wdoc!/index.html
 
