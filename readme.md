@@ -40,7 +40,7 @@ Unfortunately **PDF**'s do have some problems:
 5. Most browsers have extensions for users to easily change the font in use (e.g. [OpenDyslexic](http://opendyslexic.org/get-it-free/)).
 6. Extensions can also fix colour contrast issues.
 7. Browsers are much better at supporting copy/paste, and allowing the content to be indexed (e.g. searching).
-8. When authoring documents, the positioning of elements in HTML are rarely done with absolute positioning, as CSS provides better layout features (e.g. flexbox), which is generally easier and more intuitive.
+8. When authoring documents, the positioning of elements in HTML is rarely done with absolute positioning, as CSS provides better layout features (e.g. flexbox), which is generally easier and more intuitive.
 
 But we can't just email a **HTML** document to someone because:
 
@@ -53,7 +53,7 @@ An alternative to **HTML** is **MHTML**, but this is pretty much the same (where
 
 Another alternative is **DOCX** (MS Office), or **OpenDocument**, but these have their own problems:
 
-- Are perceived as easily editable, and often opened in a word processing program to reinforce this idea.
+- Perceived as easily editable, and often opened in a word processing program to reinforce this idea.
 - Use their own specifications, which are fairly difficult to read/understand for developers who are typically used to HTML.
 
 Then there is **EPUB**:
@@ -62,7 +62,7 @@ Then there is **EPUB**:
 - Works on the assumption that you want multi-paged content, for example, most e-readers (on a large screen) will present the document with 2 pages, resembling a book layout.
 - Requires a [Table of Contents](http://www.idpf.org/epub/30/spec/epub30-contentdocs.html#sec-xhtml-nav-def-types-toc).
 - Requires a special program to package up the document (e.g. the [IDPF Java program](https://github.com/IDPF/epub3-samples)).
-- Contains a fair amount of meta data (e.g. a list of all the XHTML documents in the OPF `<manifest>` and `<spine>`), which is extra work for developers to maintain for little to no value in some types of documents.
+- Contains a fair amount of meta data (e.g. a list of all the XHTML documents in the OPF `<manifest>` and `<spine>`), which is extra work for developers to maintain, for little to no value in some types of documents.
 - It can allow [remote content](http://www.idpf.org/epub/30/spec/epub30-publications.html#sec-resource-locations), which is not appropriate for the documents listed above.
 
 And finally **PWP**, which is related to **EPUB**:
@@ -75,8 +75,6 @@ And it shares the same issues as the EPUB format.
 ---
 
 # A Possible Solution
-
-## Technically Creating Files
 
 Start with an `index.html` file in a folder, and include the needed resources (e.g. images/css).
 
