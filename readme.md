@@ -96,7 +96,7 @@ And it's done.
 
 ## End User's Experience
 
-A Word Processor could just save to this file format, from a users point of view, this is the same as exporting to a PDF file.
+A Word Processor could just save to this file format. From a users point of view, this is the same as exporting to a PDF file.
 
 This should be fairly easy to implement, as most word processors already have the ability to save as a HTML file.
 
