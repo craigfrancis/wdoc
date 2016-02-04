@@ -5,7 +5,7 @@ Simply put an `index.html` file (and any other assets, e.g. images) in to a ZIP 
 
 Browsers can then open this file, and display it like a web page.
 
-Unlike **PDF**, **EPUB**, and **MHTML**, this format is *very* easy to create, and the browser will apply some restrictions on what it can do (so users can trust it).
+Unlike **PDF**, **EPUB**, and **MHTML**, this format is *very* easy to create, and the browser will apply some extra restrictions on what it can do (for security reasons, and so users can trust it).
 
 ---
 
