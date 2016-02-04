@@ -1,7 +1,7 @@
 
 # PDF Alternative Using HTML (ZIP/GZIP)
 
-Simply put an `index.html` file (and any other assets, e.g. images) in to a ZIP file, and use a different extension.
+Simply put an `index.html` file (and any other assets, e.g. images) into a ZIP file, and use a different extension.
 
 Browsers can then open this file, and display it like a web page.
 
