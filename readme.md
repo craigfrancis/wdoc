@@ -140,7 +140,7 @@ Firefox already has some of this in place with the `jar` protocol:
 
 	jar:file:///tmp/example.wdoc!/index.html
 
-The browser can also use the existing functionality for [Content Security Policies](https://en.wikipedia.org/wiki/Content_Security_Policy), to block outbound connections. If implemented on a website, it would look something like:
+The browser can also use the existing functionality for [Content Security Policies](https://en.wikipedia.org/wiki/Content_Security_Policy), to block outbound connections, and block resources that are not in the ZIP file. If implemented on a website, it would look something like:
 
 	default-src 'none';
 	style-src 'self';
@@ -152,7 +152,7 @@ The browser can also use the existing functionality for [Content Security Polici
 
 For security reasons the browser should not include [unsafe-inline](https://www.w3.org/TR/CSP/#directive-script-src) in the `script-src`, just for following good programming practices. However if it was included, it would not cause any problems as the rest of the document is sandboxed anyway.
 
-The browser would also block resources that are not in the ZIP file, which should work with existing functionality (where the [sub-origin](https://w3c.github.io/webappsec-suborigins/) proposal will work with this as well).
+Some of these restrictions will need to be tweaked though, in the same way that they will for the [sub-origin](https://w3c.github.io/webappsec-suborigins/) proposal.
 
 It could be argued that it should also block JavaScript from accessing the current date/time, so we don't have content that changes after a certain point in time (keeping in mind legal documents).
 
