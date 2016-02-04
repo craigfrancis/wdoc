@@ -1,6 +1,16 @@
 
 # PDF Alternative Using HTML (ZIP/GZIP)
 
+Simply put an `index.html` file (and any other assets, e.g. images) in to a ZIP file, and use a different extension.
+
+Browsers can then open this file, and display it like a web page.
+
+Unlike **PDF**, **EPUB**, and **MHTML**, this format is *very* easy to create, and the browser will apply some restrictions on what it can do (so users can trust it).
+
+---
+
+# Justification
+
 Sometimes you need create documents that can be emailed, printed, archived, etc.
 
 Some examples include:
