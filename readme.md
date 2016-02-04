@@ -142,7 +142,7 @@ The browser can also use the existing functionality for [Content Security Polici
 
 For security reasons the browser should not include [unsafe-inline](https://www.w3.org/TR/CSP/#directive-script-src) in the `script-src`, just for following good programming practices. However if it was included, it would not cause any problems as the rest of the document is sandboxed anyway.
 
-The browser would also block resources that are not in the ZIP file, which should be possible with existing functionality (with the current sub-origin proposals needing this as well).
+The browser would also block resources that are not in the ZIP file, which should be possible with existing functionality (with the current [sub-origin](https://w3c.github.io/webappsec-suborigins/) proposals needing this as well).
 
 It could be argued that it should also block JavaScript from accessing the current date/time, so we don't have content that changes after a certain point in time (keeping in mind legal documents).
 
