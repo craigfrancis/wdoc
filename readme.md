@@ -90,7 +90,7 @@ Start with an `index.html` file in a folder, and include the needed resources (e
 
 Then use ZIP/GZIP to package it:
 
-	zip -r ./my-file.wdoc ./my-file/
+	zip -r ./example.wdoc ./example/
 
 And it's done.
 
@@ -138,7 +138,7 @@ Noting that the last two still cannot reference anything outside of the ZIP file
 
 Firefox already has some of this in place with the `jar` protocol:
 
-	jar:file:///.../my-file.wdoc!/index.html
+	jar:file:///tmp/example.wdoc!/index.html
 
 The browser can also use the existing functionality for [Content Security Policies](https://en.wikipedia.org/wiki/Content_Security_Policy), to block outbound connections. If implemented on a website, it would look something like:
 
