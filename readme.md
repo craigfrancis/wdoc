@@ -124,15 +124,15 @@ And the resources within it can be referenced with:
 
 	<img src="./img/logo.jpg" />
 
-	file:///tmp/example.wdoc/img/logo.jpg
+	  file:///tmp/example.wdoc/img/logo.jpg
 
 	<link rel="stylesheet" href="/css/styles.css" />
 
-	file:///tmp/example.wdoc/css/styles.css
+	  file:///tmp/example.wdoc/css/styles.css
 
 	<a href="../../../../../../page2.html">Page 2</a>
 
-	file:///tmp/example.wdoc/page2.html
+	  file:///tmp/example.wdoc/page2.html
 
 Noting that the last two still cannot reference anything outside of the ZIP file, in the same way as resources are currently handled on websites.
 
