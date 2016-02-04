@@ -118,21 +118,21 @@ The browsers will need to get to the `index.html` from the ZIP (which the author
 
 So this file can be referenced like any local file:
 
-	file:///temp/example.wdoc
+	file:///tmp/example.wdoc
 
 And the resources within it can be referenced with:
 
 	<img src="./img/logo.jpg" />
 
-	file:///temp/example.wdoc/img/logo.jpg
+	file:///tmp/example.wdoc/img/logo.jpg
 
 	<link rel="stylesheet" href="/css/styles.css" />
 
-	file:///temp/example.wdoc/css/styles.css
+	file:///tmp/example.wdoc/css/styles.css
 
 	<a href="../../../../../../page2.html">Page 2</a>
 
-	file:///temp/example.wdoc/page2.html
+	file:///tmp/example.wdoc/page2.html
 
 Noting that the last two still cannot reference anything outside of the ZIP file, in the same way as resources are currently handled on websites.
 
