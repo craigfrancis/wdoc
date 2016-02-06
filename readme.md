@@ -185,6 +185,7 @@ The example file extension is **wdoc** (web document), but could be anything.
 - [Chrome](https://crbug.com/575677)
 - [Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=1237990)
 - [Edge](https://wpdev.uservoice.com/forums/257854-microsoft-edge-developer/suggestions/11443002-webpage-zip-as-alternative-to-pdf)
+- [Safari](https://bugs.webkit.org/show_bug.cgi?id=153953)
 
 ## Mailing Lists
 
