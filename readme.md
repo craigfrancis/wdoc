@@ -184,7 +184,7 @@ The example file extension is **wdoc** (web document), but could be anything.
 
 These file formats are very similar to this proposal, but do not include the necessary restrictions mentioned above:
 
-- [MAFF](http://maf.mozdev.org/), also a ZIP file, with some extra metadata.
+- [MAFF](http://maf.mozdev.org/), also a ZIP file, with some extra meta data.
 - [Webarchive](https://en.wikipedia.org/wiki/Webarchive), based on the binary plist format, introduced with Safari.
 - [WAR](https://docs.oracle.com/javaee/7/tutorial/packaging003.htm), a JAR file for distributing a web application.
 - [ARC](http://archive.org/web/researcher/ArcFileFormat.php) and [WARC](http://archive-access.sourceforge.net/warc/) formats for aggregate web page archival.
