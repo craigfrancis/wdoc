@@ -150,7 +150,7 @@ The browser can also use the existing functionality for [Content Security Polici
 	referrer no-referrer;
 	frame-ancestors 'none'
 
-For security reasons the browser should not include [unsafe-inline](https://www.w3.org/TR/CSP/#directive-script-src) in the `script-src`, just for following good programming practices. However if it was included, it would not cause any problems as the rest of the document is sandboxed anyway.
+For security reasons the browser should not include [unsafe-inline](https://www.w3.org/TR/CSP/#directive-script-src) in the `script-src`, just for following good programming practices ([example](./demonstrations/inline-javascript/index.html)). However if it was included, it would not cause any problems as the rest of the document is sandboxed anyway.
 
 Some of these restrictions will need to be tweaked though, in the same way that they will for the [sub-origin](https://w3c.github.io/webappsec-suborigins/) proposal.
 
