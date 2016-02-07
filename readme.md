@@ -60,7 +60,7 @@ But we can't just email a **HTML** document to someone because:
 - It can contain tracking code (JavaScript, images, etc) that allow the author to track when the file is opened (and possibly other events).
 - If you email the document, you cannot keep resources (like images) as separate files, they will need to be inlined (difficult, and can cause encoding problems).
 
-An alternative to **HTML** is **MHTML**, but this is pretty much the same (where the file is formatted like an email). This means you still have the same problems, but it will also need a program to parse the source HTML, include/encode the required resources, and update the HTML to point to those resources.
+An alternative to **HTML** is **MHTML**, but this is pretty much the same (where the file is [formatted like an email](./alternatives/mhtml/hello-world.mht)). This means you still have the same problems, but it will also need a program to parse the source HTML, include/encode the required resources, and update the HTML to point to those resources.
 
 Another alternative is **DOCX** (MS Office), or **OpenDocument**, but these have their own problems:
 
@@ -184,7 +184,7 @@ The example file extension is **wdoc** (web document), but could be anything.
 
 These file formats are very similar to this proposal, but do not include the necessary restrictions mentioned above:
 
-- [MAFF](http://maf.mozdev.org/), also a ZIP file, with some extra meta data.
+- [MAFF](http://maf.mozdev.org/), also a ZIP file, with some [extra meta data](./alternatives/maff/hello-world/).
 - [Webarchive](https://en.wikipedia.org/wiki/Webarchive), based on the binary plist format, introduced with Safari.
 - [WAR](https://docs.oracle.com/javaee/7/tutorial/packaging003.htm), a JAR file for distributing a web application.
 - [ARC](http://archive.org/web/researcher/ArcFileFormat.php) and [WARC](http://archive-access.sourceforge.net/warc/), formats for aggregate web page archival.

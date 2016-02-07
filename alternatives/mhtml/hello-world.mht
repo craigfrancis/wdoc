@@ -1,0 +1,48 @@
+Subject: Hello World
+Date: Sun, 07 Feb 2016 17:06:18 +0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_6EFFFC22.C88DC26E"
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_6EFFFC22.C88DC26E
+Content-Type: text/html;
+	charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.example.com/
+
+<!DOCTYPE html><html lang=3D"en"><head>
+<meta http-equiv=3D"content-type" content=3D"text/html; charset=3DUTF-8">
+	<meta charset=3D"UTF-8">
+	<title>Hello World</title>
+	<link rel=3D"stylesheet" type=3D"text/css" href=3D"urn:snapshot-D9E8749E:s=
+tyle.css">
+</head>
+<body>
+
+	<h1>Hello World</h1>
+	<p id=3D"new-text1">Lorem ipsum dolor sit amet, consectetur adipisicing el=
+it.</p>
+	<p id=3D"new-text2">Lorem ipsum dolor sit amet, consectetur adipisicing el=
+it.</p>
+
+	<script type=3D"text/javascript">
+		document.getElementById('new-text2').textContent = 'This was added by=
+ JavaScript :-)';
+	</script>
+
+</body></html>
+------=_NextPart_000_0000_6EFFFC22.C88DC26E
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-D9E8749E:style.css
+
+@charset "UTF-8";
+
+body {
+	background: #EEE;
+}
+
+------=_NextPart_000_0000_6EFFFC22.C88DC26E--
