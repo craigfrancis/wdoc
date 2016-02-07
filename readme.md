@@ -1,7 +1,7 @@
 
 # PDF Alternative Using HTML (ZIP/GZIP)
 
-Simply put an `index.html` file (and any other assets, e.g. images) into a ZIP file, and use a different extension.
+Create a ZIP file, which contains an `index.html` and any other assets (e.g. images), and change the extension to ".wdoc"
 
 Browsers can then open this file, and display it like a web page.
 
@@ -20,6 +20,7 @@ Some examples include:
 - Contracts.
 - Reports, assessments, statistics.
 - Bank statements.
+- Archiving a webpage.
 
 These are often created as **PDF** files, as they:
 
@@ -79,8 +80,7 @@ And finally **PWP**, which is related to **EPUB**:
 
 (For those unfamiliar with the format, these documents are referenced from a [central URL](https://www.w3.org/TR/pwp/#identification), and it uses the Open Web *Platform* to distribute the content. This allows you to refer to the publications canonical source).
 
-This format allows you to download the publication, and [store it for offline use](https://www.w3.org/TR/pwp/#package). But new versions can be pulled from the source URL (not good for Terms and Conditions, Invoices etc).
-And it shares the same issues as the EPUB format.
+This format allows you to download the publication, and [store it for offline use](https://www.w3.org/TR/pwp/#package). But new versions can be pulled from the source URL (not good for Terms and Conditions, Invoices etc). And it shares the same issues as the EPUB format.
 
 ---
 
