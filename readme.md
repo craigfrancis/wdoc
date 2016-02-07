@@ -180,7 +180,9 @@ It has the potential to support multiple languages... or perhaps just use `lang=
 
 The example file extension is **wdoc** (web document), but could be anything.
 
-There is a couple of other file formats which are very similar, but do not include the necessary restrictions mentioned above:
+## Other alternatives
+
+These file formats are very similar to this proposal, but do not include the necessary restrictions mentioned above:
 
 - [MAFF](http://maf.mozdev.org/), also a ZIP file, with some extra meta data.
 - [Webarchive](https://en.wikipedia.org/wiki/Webarchive), based on the binary plist format, introduced with Safari.
