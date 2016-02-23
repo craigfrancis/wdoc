@@ -78,7 +78,7 @@ Then there is **EPUB**:
 
 And finally **PWP**, which is related to **EPUB**:
 
-(For those unfamiliar with the format, these documents are referenced from a [central URL](https://www.w3.org/TR/pwp/#identification), and it uses the Open Web *Platform* to distribute the content. This allows you to refer to the publications canonical source).
+(For those unfamiliar with the format, these documents are referenced from a [central URL](https://www.w3.org/TR/pwp/#identification), and uses the Open Web *Platform* to distribute the content. This allows you to refer to the publications canonical source).
 
 This format allows you to download the publication, and [store it for offline use](https://www.w3.org/TR/pwp/#package). But new versions can be pulled from the source URL (not good for Terms and Conditions, Invoices etc). And it shares the same issues as the EPUB format.
 
