@@ -3,9 +3,9 @@
 
 Create a ZIP file, which contains an `index.html` and any other assets (e.g. images), and change the extension to ".wdoc"
 
-Browsers can then open this file, and display it like a web page.
+Browsers then open this file, and display it like a web page.
 
-Unlike **PDF**, **EPUB**, and **MHTML**, this format is *very* easy to create, and the browser will apply some extra restrictions on what it can do (for security reasons, so users can trust it).
+Unlike **PDF**, **EPUB**, and **MHTML**, this format is *very* easy to create, and the browser *must* apply some extra restrictions on what it can do (for security reasons, and so users can trust it).
 
 ---
 
