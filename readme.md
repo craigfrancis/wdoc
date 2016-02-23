@@ -64,7 +64,7 @@ An alternative to **HTML** is **MHTML**, but this is pretty much the same (where
 
 Another alternative is **DOCX** (MS Office), or **OpenDocument**, but these have their own problems:
 
-- Perceived as easily editable, and often opened in a word processing program to reinforce this idea.
+- Perceived by the end user as easily editable, and often opened in a word processing program to reinforce this idea.
 - Use their own specifications, which are fairly difficult to read/understand for developers who are typically used to HTML.
 
 Then there is **EPUB**:
