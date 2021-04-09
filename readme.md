@@ -7,6 +7,8 @@ Browsers then open this file, and display it like a web page.
 
 Unlike **PDF**, **EPUB**, and **MHTML**, this format is *very* easy to create, and the browser *must* apply some extra restrictions on what the document can do (for security reasons, and so users can trust it).
 
+This might be possible as a [WebPackage](https://github.com/WICG/webpackage/issues/576), so long as network access can be blocked.
+
 ---
 
 # Justification
